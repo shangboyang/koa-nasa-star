@@ -43,6 +43,7 @@ app.use(async (ctx, next) => {
 
 // response router
 app.use(async (ctx, next) => {
+  console.log(ctx.response.status);
   await require('./routes').routes()(ctx, next)
 })
 
@@ -57,7 +58,7 @@ app.on('error', async (err, ctx) => {
   console.log('error occured:', err)
 })
 
-const port = parseInt(config.port || '3000')
+const port = parseInt(config.port || '7709')
 const server = http.createServer(app.callback())
 
 server.listen(port)

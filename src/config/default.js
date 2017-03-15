@@ -4,7 +4,7 @@
  * @Email i@zeroling.com
  */
 export default {
-  port: 3000,
+  port: 7709,
   db: {
     host: 'localhost',
     database: 'koa2_startkit',
