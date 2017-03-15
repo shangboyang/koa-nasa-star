@@ -8,18 +8,18 @@
 
 [调试模式] 断点调试 (test feature)
 
-[线上模式] 借助 pm2 使用 cluster 模式压榨多核 CPU 性能 
+[线上模式] 借助 pm2 使用 cluster 模式压榨多核 CPU 性能
 
 ## Getting Start
 
 ```
-git clone https://github.com/17koa/koa2-startkit.git
+git clone http://git-ma.paic.com.cn/ssdd-front-end/koa2-startkit.git
 cd koa2-startkit
 npm install # 国内可以使用 cnpm 加速, 教育网可使用 rednpm (https://npm.mirror.cqupt.edu.cn) 加速
 npm start
 ```
 
-然后使用浏览器打开 http://127.0.0.1:3000/ 即可
+然后使用浏览器打开 http://127.0.0.1:7709/ 即可
 
 ## Npm scripts
 
@@ -46,7 +46,7 @@ cp nginx.conf /etc/nginx/conf.d/YourProject.conf # 自行配置 nginx 反代
 
 ## 配置文件的 trick
 
-引用配置的方式: 
+引用配置的方式:
 
 ```javascript
 import config from './config'
@@ -64,7 +64,7 @@ import config from './config'
 $ npm run debug
 ```
 
-在 VSCode 编辑器中: 
+在 VSCode 编辑器中:
 
 ![1](https://dn-redrock.qbox.me/github/koa-1.png)
 
@@ -95,7 +95,7 @@ $ npm run debug
 │   ├── debug.js
 │   ├── development.js      # 开发模式下项目的入口文件
 │   └── production.js       # 线上入口文件, 请预先使用 npm run compile 编译
-├── nginx.conf              # nginx 的配置文件，建议线上使用 nginx 做反向代理。 
+├── nginx.conf              # nginx 的配置文件，建议线上使用 nginx 做反向代理。
 ├── package.json            # package.json
 ├── pm2.json                # 用于 pm2 部署
 ├── public                  # 静态资源路径
@@ -120,6 +120,4 @@ $ npm run debug
 
 ## Contact
 
-[issues](https://github.com/17koa/koa2-startkit/issues)
-
-[@Ling](https://github.com/wssgcg1213)    
+[issues](https://github.com/17koa/koa2-startkit/issues)  
