@@ -17,4 +17,6 @@ router.get('/', async (ctx, next) => {
 // 添加URL match controller
 router.get('/cms/open/newArticles', articleCtrl)
 
+router.post('/cms/open/newArticles', articleCtrl)
+
 export default router
