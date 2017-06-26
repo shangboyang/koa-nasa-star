@@ -15,8 +15,8 @@ router.get('/', async (ctx, next) => {
 })
 
 // 添加URL match controller
-router.get('/cms/open/newArticles', articleCtrl)
+router.get('/siapp-sms/open/getArticles.do', articleCtrl)
 
-router.post('/cms/open/newArticles', articleCtrl)
+router.post('/siapp-sms/open/getArticles.do', articleCtrl)
 
 export default router
