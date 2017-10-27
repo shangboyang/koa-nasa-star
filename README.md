@@ -1,6 +1,6 @@
-# koa2-startkit
-[![Build Status](https://travis-ci.org/17koa/koa2-startkit.svg?branch=master)](https://travis-ci.org/17koa/koa2-startkit)  
-一个 Koa2 的脚手架
+# koa-nasa-star
+
+Koa2 的脚手架
 
 可以直接在项目里使用 ES6/7（Generator Function, Class, Async & Await）等特性，借助 Babel 编译，可稳定运行在 Node.js 环境上。
 
@@ -13,8 +13,8 @@
 ## Getting Start
 
 ```
-git clone http://git-ma.paic.com.cn/ssdd-front-end/koa2-startkit.git
-cd koa2-startkit
+git clone https://github.com/shangboyang/koa-nasa-star.git
+cd koa-nasa-star
 npm install # 国内可以使用 cnpm 加速, 教育网可使用 rednpm (https://npm.mirror.cqupt.edu.cn) 加速
 npm start
 ```
@@ -119,5 +119,5 @@ $ npm run debug
 
 
 ## Contact
-
+[![Build Status](https://travis-ci.org/17koa/koa2-startkit.svg?branch=master)](https://travis-ci.org/17koa/koa2-startkit)
 [issues](https://github.com/17koa/koa2-startkit/issues)  

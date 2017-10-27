@@ -1,8 +1,10 @@
 import Router from 'koa-router'
-import articleCtrl from '../modules/article/controller/articleCtrl'
+import ArticleController from '../modules/article/controller/articleCtrl'
+
+const ac = new ArticleController()
+console.log('aaaaa async::::', a.getArticles);
 
 const router = Router()
-
 
 router.get('/', async (ctx, next) => {
   const title = 'Koa2 Mock Sever'
@@ -15,8 +17,8 @@ router.get('/', async (ctx, next) => {
 })
 
 // 添加URL match controller
-router.get('/siapp-sms/open/getArticles.do', articleCtrl)
+router.get('/siapp-sms/open/getArticles.do', ac.getArticles)
 
-router.post('/siapp-sms/open/getArticles.do', articleCtrl)
+router.post('/siapp-sms/open/getArticles.do', ac.getArticles)
 
 export default router
