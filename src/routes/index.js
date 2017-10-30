@@ -1,8 +1,7 @@
 import Router from 'koa-router'
-import ArticleController from '../modules/article/controller/articleCtrl'
+import ArticleController from '../modules/article/controller/articleController'
 
 const ac = new ArticleController()
-console.log('aaaaa async::::', a.getArticles);
 
 const router = Router()
 
@@ -17,8 +16,8 @@ router.get('/', async (ctx, next) => {
 })
 
 // 添加URL match controller
-router.get('/siapp-sms/open/getArticles.do', ac.getArticles)
+router.get('/siapp-sms/open/articles/get.do', ac.getArticles)
 
-router.post('/siapp-sms/open/getArticles.do', ac.getArticles)
+router.post('/siapp-sms/open/articles/get.do', ac.getArticles)
 
 export default router
