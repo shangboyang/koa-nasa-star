@@ -9,6 +9,7 @@ import defaultConfig from './default'
 
 const cfgs = []
 fs.readdirSync(__dirname).map(filename => {
+  console.log('filename:::', filename);
   if (filename === 'index.js') {
     return false
   }

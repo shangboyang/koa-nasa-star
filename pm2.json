@@ -1,6 +1,6 @@
 {
   "apps": [{
-    "name": "koa2-startkit",
+    "name": "koa-nasa-star",
     "script": "bin/production.js",
     // "cwd": "/absolute/path/to/project",
     "exec_mode": "cluster",

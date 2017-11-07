@@ -3,31 +3,26 @@ import articles from '../data/articles'
 
 let timer = null;
 
-/**
- * 获取标签
- * @param  {[type]} ctx [description]
- * @return {[type]}     [description]
- */
-export function getColumns(ctx) {
+class ArticleService {
+  /**
+   * 获取文章
+   */
+  static getArticles(data) {
+    let articles
 
-  // codes...
+    if (data.code === 200 && data.body.articles.length > 0) {
+      articles = data.body.articles
+    } else {
+      articles = []
+    }
 
-  
+    return articles
+  }
 
-  return columns
+  static getTitles(data) {
+    return data
+  }
+
 }
 
-/**
- * 获取文章
- * @param  {[type]} ctx [description]
- * @return {[type]}     [description]
- */
-export function getArticles(ctx) {
-  
-  timer = setTimeout(()=> {
-  	clearTimeout(timer);
-  }, 2000)
-
-  
-  return articles;
-}
+export default ArticleService

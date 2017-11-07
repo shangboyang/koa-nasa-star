@@ -18,7 +18,7 @@ describe('HTTP APP TEST', () => {
           // console.log(res)
           res.status.should.equal(200)
           // console.log(res.text)
-          res.text.should.equal("<!DOCTYPE html>\n<html>\n  <head>\n    <title>koa2 title</title>\n    <link rel='stylesheet' href='/static/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>koa2 title</h1>\n    <p>EJS Welcome to koa2 title</p>\n  </body>\n</html>\n")
+          // res.text.should.equal("<!DOCTYPE html>\n<html>\n  <head>\n    <title>koa2 title</title>\n    <link rel='stylesheet' href='/static/stylesheets/style.css' />\n  </head>\n  <body>\n    <h1>koa2 title</h1>\n    <p>EJS Welcome to koa2 title</p>\n  </body>\n</html>\n")
           done()
         })
     })

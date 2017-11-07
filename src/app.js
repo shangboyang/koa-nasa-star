@@ -1,4 +1,5 @@
 import http from 'http'
+// import https from 'https'
 import Koa from 'koa'
 import path from 'path'
 import views from 'koa-views'
@@ -8,6 +9,7 @@ import Bodyparser from 'koa-bodyparser'
 import logger from 'koa-logger'
 import koaStatic from 'koa-static-plus'
 import koaOnError from 'koa-onerror'
+import cors from 'koa2-cors'
 import config from './config'
 
 const app = new Koa()
@@ -23,22 +25,32 @@ app.use(convert(koaStatic(path.join(__dirname, '../public'), {
   pathPrefix: ''
 })))
 
+// console.log('__dirname::', __dirname); /Users/Boyang/Workspace/koa-nasa-star/app
+// console.log('path join::', path.join(__dirname, '../views')); /Users/Boyang/Workspace/koa-nasa-star/views
+
 // views
 app.use(views(path.join(__dirname, '../views'), {
   extension: 'ejs'
 }))
 
+// cors
+app.use(cors({
+  origin: function(ctx) {
+    if (ctx.url === '/test') {
+      return '*';
+    }
+    return '*';
+  },
+  exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
+  maxAge: 5,
+  credentials: true,
+  allowMethods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+  allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
+}))
+
 // 500 error
 koaOnError(app, {
   template: 'views/500.ejs'
-})
-
-// logger
-app.use(async (ctx, next) => {
-  const start = new Date()
-  await next()
-  const ms = new Date() - start
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
 
 // response router
