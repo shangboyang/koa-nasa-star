@@ -17,7 +17,7 @@ router.get('/', async (ctx, next) => {
 /**
  * 文章模块
  */
-router.get('/siapp-sms/open/articles/query', ArticleController.getArticles) //
-router.post('/siapp-sms/open/articles/query', ArticleController.getArticles)
+router.get('/siapp-node/open/article/query', ArticleController.getArticles) //
+router.post('/siapp-node/open/article/query', ArticleController.getArticles)
 
 export default router

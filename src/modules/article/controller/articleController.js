@@ -2,7 +2,7 @@ import ArticleService from '../service/articleService'
 import fetch from 'node-fetch'
 
 class ArticleController {
-  static async getArticles (ctx) {
+  static async getArticles (ctx, next) {
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
     //  * ctx.request *
@@ -28,6 +28,7 @@ class ArticleController {
       a: 1,
       b: 2,
     }
+
     const URL = 'https://ehs.pingan.com.cn/siapp-sms/open/getArticles.do?regions=440300'
     const TYPE = 'POST'
     var resData = null,
@@ -38,10 +39,21 @@ class ArticleController {
     	body:    JSON.stringify(params),
     	headers: { 'Content-Type': 'application/json' },
     })
-    .then(res => res.json())
+    .then(res => {
+      if (res.ok) {
+        return res.json()
+      }
+    })
     .then((data) => {
-      originData = data
-      resData = ArticleService.getArticles(data)
+      if (data) {
+        originData = data
+        resData = ArticleService.getArticles(data)
+      } else {
+        resData = []
+      }
+    })
+    .catch((e) => {
+      console.log('error:', e);
     })
 
     ctx.response.type = 'application/json'
