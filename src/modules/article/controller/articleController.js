@@ -62,6 +62,7 @@ class ArticleController {
   		'Access-Control-Expose-headers': 'accept, token, zoneCode'
   	})
     ctx.response.body = resData // Node middle service Response
+
     /*
     await ctx.render('res', {
       title: 'Nasa Star Mock - Response from Back-End Data',
