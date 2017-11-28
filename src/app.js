@@ -48,6 +48,7 @@ app.use(cors({
   allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
 }))
 
+
 // 500 error
 koaOnError(app, {
   template: 'views/500.ejs'
