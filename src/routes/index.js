@@ -19,6 +19,7 @@ router.get('/', async (ctx, next) => {
 /**
  * 文章模块
  */
+<<<<<<< 048cf123be4586772af32569e762874d81819644
 router.get('/article/query.node', ArticleController.getArticles) //
 router.get('/static/node-proxy/article/query.node', ArticleController.getArticles) //
 router.post('/static/node-proxy/article/query.node', ArticleController.getArticles)
@@ -36,5 +37,9 @@ router.post('/order/info.node', orderController.getOrderData)
 // router.post('/static/node-proxy/placeOrder/userInfo.node', placeOrderController.getUserInfoData)
 router.post('/static/node-proxy/placeOrder/price.node', placeOrderController.getPriceData)
 router.post('/placeOrder/price.node', placeOrderController.getPriceData)
+=======
+router.get('/static/node-proxy/article/query', ArticleController.getArticles) //
+router.post('/static/node-proxy`/article/query', ArticleController.getArticles)
+>>>>>>> change route
 
 export default router
