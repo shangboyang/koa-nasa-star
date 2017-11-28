@@ -1,6 +1,5 @@
 import ArticleService from '../service/articleService'
 import fetch from 'node-fetch'
-var FormData = require('form-data');
 
 class ArticleController {
   static async getArticles (ctx, next) {
