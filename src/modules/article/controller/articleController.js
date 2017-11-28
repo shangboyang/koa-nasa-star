@@ -1,5 +1,6 @@
 import ArticleService from '../service/articleService'
 import fetch from 'node-fetch'
+var FormData = require('form-data');
 
 class ArticleController {
   static async getArticles (ctx, next) {
@@ -22,6 +23,10 @@ class ArticleController {
     //    }
     // }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // console.log('request json:::',ctx.request.body); //post json 请求参数
+    // console.log('request form-data:::',ctx.request.body.fields); //post form-data 请求参数
+    // console.log('request params:::',ctx.query); // params 请求参数
 
     let getQuery = ctx.request.query //
     let params = {

@@ -5,18 +5,20 @@ import path from 'path'
 import views from 'koa-views'
 import convert from 'koa-convert'
 import json from 'koa-json'
-import Bodyparser from 'koa-bodyparser'
+// import Bodyparser from 'koa-bodyparser'
 import logger from 'koa-logger'
 import koaStatic from 'koa-static-plus'
 import koaOnError from 'koa-onerror'
 import cors from 'koa2-cors'
 import config from './config'
+import koaBody from'koa-body'
 
 const app = new Koa()
-const bodyparser = Bodyparser()
+// const bodyparser = Bodyparser()
 
 // middlewares
-app.use(convert(bodyparser))
+// app.use(convert(bodyparser))
+app.use(convert(koaBody({multipart: true})));
 app.use(convert(json()))
 app.use(convert(logger()))
 
