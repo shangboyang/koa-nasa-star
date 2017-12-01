@@ -19,6 +19,7 @@ router.get('/', async (ctx, next) => {
 /**
  * 文章模块
  */
+router.get('/article/query.node', ArticleController.getArticles) //
 router.get('/static/node-proxy/article/query.node', ArticleController.getArticles) //
 router.post('/static/node-proxy/article/query.node', ArticleController.getArticles)
 
@@ -27,11 +28,13 @@ router.post('/static/node-proxy/article/query.node', ArticleController.getArticl
  */
 router.post('/city/citymain/security/insurance/insOrder/query', orderController.getMockData)
 router.post('/static/node-proxy/order/info.node', orderController.getOrderData)
+router.post('/order/info.node', orderController.getOrderData)
 
 /**
  * 保险投保模块-试算接口
  */
 // router.post('/static/node-proxy/placeOrder/userInfo.node', placeOrderController.getUserInfoData)
 router.post('/static/node-proxy/placeOrder/price.node', placeOrderController.getPriceData)
+router.post('/placeOrder/price.node', placeOrderController.getPriceData)
 
 export default router
