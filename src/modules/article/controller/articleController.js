@@ -8,7 +8,7 @@ class ArticleController {
     //  * ctx.request *
     // {
     //   method: 'GET',
-    //   url: '/siapp-sms/open/articles/get.do?a=1&b=2',
+    //   url: '/-sms/open/articles/get.do?a=1&b=2',
     //   header: {
     //      host: 'localhost:7709',
     //      connection: 'keep-alive',
