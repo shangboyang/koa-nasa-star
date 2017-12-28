@@ -29,7 +29,7 @@ class ArticleController {
       b: 2,
     }
 
-    const URL = 'https://ehs.pingan.com.cn/siapp-sms/open/getArticles.do?regions=440300'
+    const URL = 'https://xxx.com.cn/xxx/open/getArticles.do?regions=440300'
     const TYPE = 'POST'
     var resData = null,
         originData = null
