@@ -12,7 +12,6 @@ const querySaleProductImgURL = () => {
 class SaleService {
 
   /**
-    要带入销售渠道等参数进行返回
   */
   // querySaleProductURL() {
   //   return 'http://xxxxxxxxxx'
