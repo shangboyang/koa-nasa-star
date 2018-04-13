@@ -32,7 +32,7 @@ app.use(convert(koaStatic(path.join(__dirname, '../public'), {
 
 // views
 app.use(views(path.join(__dirname, '../views'), {
-  extension: 'ejs'
+  extension: 'ejs' // node 自带
 }))
 
 // cors

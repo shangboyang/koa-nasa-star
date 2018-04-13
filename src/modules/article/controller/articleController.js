@@ -27,6 +27,8 @@ class ArticleController {
     // console.log('request form-data:::',ctx.request.body.fields); //post form-data 请求参数
     // console.log('request params:::',ctx.query); // params 请求参数
 
+console.log(ctx.request.host);
+
     let getQuery = ctx.request.query //
     let params = {
       a: 1,
@@ -57,6 +59,7 @@ class ArticleController {
       }
     })
     .catch((e) => {
+      resData = e
       console.log('error:', e);
     })
 
