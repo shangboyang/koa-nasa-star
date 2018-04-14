@@ -21,15 +21,42 @@ class SaleService {
   //   return 'http://xxx.jpg'
   // }
 
-  static getResponseData() {
-    return {
+  static getResponseData(saleChannelID, sceneID, userType, sex) {
+
+    let respData
+
+    if (!saleChannelID) {
+
+      respData = {
+        code: 2001,
+        data: {},
+        msg: 'error: 请求参数缺少渠道ID'
+      }
+
+      return respData
+    }
+
+    if (!sceneID) {
+
+      respData = {
+        code: 2002,
+        data: {},
+        msg: 'error: 请求参数缺少场景ID'
+      }
+
+      return respData
+    }
+
+    respData = {
       code: 1000,
       data: {
-        imgURL: querySaleProductImgURL(),
-        productURL: querySaleProductURL()
+        imgURL: querySaleProductImgURL(saleChannelID, sceneID, userType, sex),
+        productURL: querySaleProductURL(saleChannelID, sceneID, userType, sex)
       },
       msg: 'success'
     }
+
+    return respData
   }
 }
 
